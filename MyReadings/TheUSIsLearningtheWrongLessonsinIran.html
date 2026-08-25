@@ -3,337 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>The U.S. Is Learning the Wrong Lessons in Iran</title>
-
     <style>
+
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #b91c1c;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --font-serif: Georgia, 'Times New Roman', Times, serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            background: #f5f5f5;
-            color: #222;
-            font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.75;
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
         }
 
-        .article {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 55px 70px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-        }
-
-        .category {
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #777;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 46px;
-            line-height: 1.15;
-            margin: 0 0 18px;
-            color: #111;
-        }
-
-        .subtitle {
-            font-size: 23px;
-            line-height: 1.4;
-            color: #555;
-            font-style: italic;
-            margin-bottom: 12px;
-        }
-
-        .author {
-            font-family: Arial, sans-serif;
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 35px;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: auto;
-            display: block;
+        .container {
+            max-width: 760px;
             margin: 0 auto;
         }
 
-        .caption {
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            line-height: 1.5;
-            color: #777;
-            margin-top: 10px;
-            margin-bottom: 35px;
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: none;
         }
 
-        .article p {
-            font-size: 18px;
-            margin: 0 0 22px;
+            .back-link:hover {
+                color: var(--accent-color);
+            }
+
+        article {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 32px 40px 40px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
-            .article p:first-of-type:first-letter {
+        header.article-header {
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .category {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+
+        h1.headline {
+            font-family: var(--font-serif);
+            font-size: 2.25rem;
+            color: var(--primary-color);
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            line-height: 1.15;
+        }
+
+        p.dek {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        figure {
+            margin: 24px 0;
+        }
+
+            figure img {
+                width: 100%;
+                height: auto;
+                border-radius: 6px;
+                display: block;
+            }
+
+            figure figcaption {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 8px;
+                line-height: 1.4;
+            }
+
+        .byline-block {
+            margin: 20px 0 4px;
+            font-size: 0.95rem;
+        }
+
+            .byline-block .by {
+                font-weight: 600;
+                color: var(--primary-color);
+            }
+
+            .byline-block .dateline {
+                color: var(--text-muted);
+                font-style: italic;
+                display: block;
+                margin-top: 2px;
+            }
+
+            .byline-block .pubdate {
+                color: var(--text-muted);
+                display: block;
+                margin-top: 2px;
+            }
+
+        .article-body p {
+            font-family: var(--font-serif);
+            font-size: 1.08rem;
+            color: var(--text-color);
+            margin-bottom: 18px;
+        }
+
+            .article-body p:first-of-type:first-letter {
                 float: left;
-                font-size: 64px;
-                line-height: 48px;
+                font-family: var(--font-serif);
+                font-size: 3.4rem;
+                line-height: 0.85;
                 padding-right: 8px;
-                color: #333;
+                color: var(--primary-color);
             }
 
         .highlight {
-            font-size: 22px;
-            font-weight: bold;
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
             line-height: 1.5;
-            border-left: 4px solid #555;
+            border-left: 4px solid var(--accent-color);
             padding-left: 20px;
-            margin: 35px 0;
-            color: #444;
+            margin: 28px 0;
+            color: var(--primary-color);
         }
 
-        @media (max-width: 700px) {
-
-            .article {
-                margin: 0;
-                padding: 30px 22px;
-                box-shadow: none;
-            }
-
-            h1 {
-                font-size: 34px;
-            }
-
-            .subtitle {
-                font-size: 19px;
-            }
-
-            .article p {
-                font-size: 17px;
-            }
+        .author-bio {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
     </style>
 </head>
-
 <body>
 
-    <article class="article">
+    <div class="container">
+        <a class="back-link" href="MainPage.html">&larr; Back to Iran War</a>
 
-        <div class="category">
-            Analysis
-        </div>
+        <article>
+            <header class="article-header">
+                <div class="category">Analysis</div>
+                <h1 class="headline">The U.S. Is Learning the Wrong Lessons in Iran</h1>
+                <p class="dek">Tactical excellence can never salvage strategic incompetence.</p>
+            </header>
 
-        <h1>
-            The U.S. Is Learning the Wrong Lessons in Iran
-        </h1>
+            <figure>
+                <img src="images/IRAN-STRATEGY-TACTICS-GettyImages-2263711928.jpg" alt="The USS Frank E. Petersen Jr. fires a missile while at sea">
+                <figcaption>The USS Frank E. Petersen Jr. fires a missile while at sea on Feb. 28. U.S. Navy via Getty Images.</figcaption>
+            </figure>
 
-        <div class="subtitle">
-            Tactical excellence can never salvage strategic incompetence.
-        </div>
+            <div class="byline-block">
+                <span class="by">By Bret Devereaux, a historian specializing in the Roman economy and military.</span>
+            </div>
 
-        <div class="author">
-            By Bret Devereaux, a historian specializing in the Roman economy and military.
-        </div>
+            <div class="article-body">
+                <p>Although the conflict in Iran and the Strait of Hormuz is far from over, analysts are already rushing to declare what lessons should be learned from it. An emerging genre of security policy articles highlights the various logistical and tactical shortcomings of the U.S. operation against Iran: a lack of preparation for disruptions in oil and fertilizer shipping, insufficient magazine depth in precision munitions and interceptors, a general failure to prepare effectively to counter cheap one-way attack drones, insufficient minesweepers, and so on.</p>
 
-        <img class="hero-image"
-             src="images/IRAN-STRATEGY-TACTICS-GettyImages-2263711928.jpg" />
-        alt="The USS Frank E. Petersen Jr. fires a missile while at sea">
+                <p>These are useful lessons that may help the United States prepare for future conflicts, but they are not the fundamental cause of the country's failure in the Strait of Hormuz. Even if some or all of these concerns had been addressed long before the conflict, it is hard to see how they might alter the Trump administration's failure to achieve its initial war aims of regime change, the destruction of Iran's long-range strike capability, or major alterations in Iranian policy toward nuclear weapons and regional proxies.</p>
 
-        <div class="caption">
-            The USS Frank E. Petersen Jr. fires a missile while at sea on Feb. 28.
-            U.S. Navy via Getty Images.
-        </div>
+                <p>While greater magazine depth and preparedness for oil shortages might have enabled a longer bombing campaign or a greater degree of economic pressure, that is no reason to suppose that seven months of bombing or blockade might achieve what nearly six months thus far have not. Strategic failure, leaving Iran with a freer hand to pursue nuclear ambitions, a far greater degree of control over the Strait of Hormuz, and consequently a greater degree of influence over the Gulf states now seems the most likely outcome of this military debacle.</p>
 
+                <p>The U.S. military remains remarkably capable, demonstrating even in this poorly conceived war technical capabilities that no other military can currently match, projecting military force more than 7,000 miles from American shores, and seizing control of Iran's skies with the apparent casual ease the world has become accustomed to in America's wars.</p>
 
-        <p>
-            Although the conflict in Iran and the Strait of Hormuz is far from over,
-            analysts are already rushing to declare what lessons should be learned
-            from it. An emerging genre of security policy articles highlights the
-            various logistical and tactical shortcomings of the U.S. operation
-            against Iran: a lack of preparation for disruptions in oil and fertilizer
-            shipping, insufficient magazine depth in precision munitions and
-            interceptors, a general failure to prepare effectively to counter cheap
-            one-way attack drones, insufficient minesweepers, and so on.
-        </p>
+                <p>The resulting damage has been remarkably lopsided, with the United States suffering at least 18 dead and more than 600 wounded against Iranian losses that almost certainly number well into the thousands, though a precise total is not known. In short, even with failures of planning and logistics, the U.S. military has shown that it remains remarkably dangerous.</p>
 
-        <p>
-            These are useful lessons that may help the United States prepare for
-            future conflicts, but they are not the fundamental cause of the
-            country’s failure in the Strait of Hormuz. Even if some or all of
-            these concerns had been addressed long before the conflict, it is hard
-            to see how they might alter the Trump administration’s failure to
-            achieve its initial war aims of regime change, the destruction of
-            Iran’s long-range strike capability, or major alterations in Iranian
-            policy toward nuclear weapons and regional proxies.
-        </p>
+                <div class="highlight">
+                    No amount of technical excellence, however, can make up for the strategic incompetence of demanding that the military accomplish the impossible.
+                </div>
 
-        <p>
-            While greater magazine depth and preparedness for oil shortages might
-            have enabled a longer bombing campaign or a greater degree of economic
-            pressure, that is no reason to suppose that seven months of bombing or
-            blockade might achieve what nearly six months thus far have not.
-            Strategic failure, leaving Iran with a freer hand to pursue nuclear
-            ambitions, a far greater degree of control over the Strait of Hormuz,
-            and consequently a greater degree of influence over the Gulf states
-            now seems the most likely outcome of this military debacle.
-        </p>
+                <p>U.S. President Donald Trump has demanded of the military not one impossible task, but three, and then reacted with shocked anger when it has failed.</p>
 
-        <p>
-            The U.S. military remains remarkably capable, demonstrating even in this
-            poorly conceived war technical capabilities that no other military can
-            currently match, projecting military force more than 7,000 miles from
-            American shores, and seizing control of Iran’s skies with the apparent
-            casual ease the world has become accustomed to in America’s wars.
-        </p>
+                <p>The first of these impossible tasks was the administration's stated aim of achieving regime change without any ground operations. Achieving a strategic victory entirely through airpower has been the coveted aim of independent air forces around the world ever since Italian theorist Giulio Douhet predicted in 1921 that future wars could be won with bombers alone.</p>
 
-        <p>
-            The resulting damage has been remarkably lopsided, with the United
-            States suffering at least 18 dead and more than 600 wounded against
-            Iranian losses that almost certainly number well into the thousands,
-            though a precise total is not known. In short, even with failures of
-            planning and logistics, the U.S. military has shown that it remains
-            remarkably dangerous.
-        </p>
+                <p>The thesis that wars can be won entirely from the air is now one of the most thoroughly tested in all of modern industrial war. The bombing campaigns of World War II, Vietnam and later conflicts demonstrated the enormous destructive power of air forces, but also the difficulty of translating that destruction into political collapse.</p>
 
-        <div class="highlight">
-            No amount of technical excellence, however, can make up for the
-            strategic incompetence of demanding that the military accomplish
-            the impossible.
-        </div>
+                <p>The chances of the Iranian regime collapsing entirely through the application of airpower were slim to none, so the next impossible thing demanded of the U.S. military was to neutralize Iran's ballistic missile and drone capacity, also entirely from the air.</p>
 
-        <p>
-            U.S. President Donald Trump has demanded of the military not one
-            impossible task, but three, and then reacted with shocked anger when
-            it has failed.
-        </p>
+                <p>In WWII, both American and British air forces made substantial efforts to shut down V-1 flying bomb and V-2 rocket production and launches through an extensive bombing campaign, codenamed Operation Crossbow, but they could not stop the launches. It was simply too easy to harden or conceal production and launch sites.</p>
 
-        <p>
-            The first of these impossible tasks was the administration’s stated
-            aim of achieving regime change without any ground operations.
-            Achieving a strategic victory entirely through airpower has been the
-            coveted aim of independent air forces around the world ever since
-            Italian theorist Giulio Douhet predicted in 1921 that future wars
-            could be won with bombers alone.
-        </p>
+                <p>The advent of precision munitions has not changed this calculus, being offset by the emergence of mobile launch systems. Efforts to take out mobile missile launchers from the air have repeatedly demonstrated the difficulty of finding and destroying systems that can fire from concealment and rapidly relocate.</p>
 
-        <p>
-            The thesis that wars can be won entirely from the air is now one of
-            the most thoroughly tested in all of modern industrial war. The
-            bombing campaigns of World War II, Vietnam and later conflicts
-            demonstrated the enormous destructive power of air forces, but also
-            the difficulty of translating that destruction into political
-            collapse.
-        </p>
+                <p>Multiple coalitions of countries have attempted to silence Houthi missiles and drones fired from Yemen, yet the launches continue. Even with precision munitions, it does not seem possible, from the air alone, to destroy enough mobile launch systems to end a drone or rocket campaign.</p>
 
-        <p>
-            The chances of the Iranian regime collapsing entirely through the
-            application of airpower were slim to none, so the next impossible
-            thing demanded of the U.S. military was to neutralize Iran’s ballistic
-            missile and drone capacity, also entirely from the air.
-        </p>
+                <p>The Trump administration's final fallback appears to be simply running nearly perfect missile defense over much of the Persian Gulf region to prevent Iran from damaging the infrastructure of the Gulf Cooperation Council countries.</p>
 
-        <p>
-            In WWII, both American and British air forces made substantial efforts
-            to shut down V-1 flying bomb and V-2 rocket production and launches
-            through an extensive bombing campaign, codenamed Operation Crossbow,
-            but they could not stop the launches. It was simply too easy to harden
-            or conceal production and launch sites.
-        </p>
+                <p>Greater investment into cost-effective interception methods and the deployment of more short-range air defense might well have enabled the U.S. military to intercept a greater percentage of Iranian attacks. Yet in an environment where drones and ballistic missiles remain much cheaper and quicker to produce than the means to intercept them, it was always likely that Iran would eventually saturate defense capacity in the region.</p>
 
-        <p>
-            The advent of precision munitions has not changed this calculus,
-            being offset by the emergence of mobile launch systems. Efforts to
-            take out mobile missile launchers from the air have repeatedly
-            demonstrated the difficulty of finding and destroying systems that
-            can fire from concealment and rapidly relocate.
-        </p>
+                <p>One more impossible task could not rescue the failure of two others.</p>
 
-        <p>
-            Multiple coalitions of countries have attempted to silence Houthi
-            missiles and drones fired from Yemen, yet the launches continue.
-            Even with precision munitions, it does not seem possible, from the
-            air alone, to destroy enough mobile launch systems to end a drone
-            or rocket campaign.
-        </p>
+                <p>If the U.S. military required a wake-up call to the dangers and opportunities posed by drones, as well as long-standing procurement problems for things like frigates, minesweepers, and hardened aircraft facilities, that call has been delivered.</p>
 
-        <p>
-            The Trump administration’s final fallback appears to be simply
-            running nearly perfect missile defense over much of the Persian Gulf
-            region to prevent Iran from damaging the infrastructure of the Gulf
-            Cooperation Council countries.
-        </p>
+                <p>But this was not a war lost in the halls of the U.S. Defense Department; it was lost in the halls of the White House.</p>
 
-        <p>
-            Greater investment into cost-effective interception methods and the
-            deployment of more short-range air defense might well have enabled
-            the U.S. military to intercept a greater percentage of Iranian
-            attacks. Yet in an environment where drones and ballistic missiles
-            remain much cheaper and quicker to produce than the means to
-            intercept them, it was always likely that Iran would eventually
-            saturate defense capacity in the region.
-        </p>
+                <p>If Trump was unable to see the peril in demanding the U.S. military accomplish the impossible, it was the duty of his defense secretary to make him aware.</p>
 
-        <p>
-            One more impossible task could not rescue the failure of two others.
-        </p>
+                <p>Hegseth, in turn, has gone to great lengths to purge the senior ranks of anyone likely to offer a contrary opinion. The U.S. officer corps has never excelled at delivering unwelcome news to political decision-makers, but this approach meant the Pentagon was never going to push back against presidential ineptitude.</p>
 
-        <p>
-            If the U.S. military required a wake-up call to the dangers and
-            opportunities posed by drones, as well as long-standing procurement
-            problems for things like frigates, minesweepers, and hardened
-            aircraft facilities, that call has been delivered.
-        </p>
+                <p>All of this was predictable and indeed much of it was predicted. Thus, while the immediate blame for the debacle in Iran attaches to Trump and his advisors, the ultimate blame must lie where no politician will admit it: with the voters.</p>
 
-        <p>
-            But this was not a war lost in the halls of the U.S. Defense
-            Department; it was lost in the halls of the White House.
-        </p>
+                <p>It turns out that electing the leader of the most powerful military on the planet is not the same as selecting the most entertaining host of a reality show.</p>
 
-        <p>
-            If Trump was unable to see the peril in demanding the U.S. military
-            accomplish the impossible, it was the duty of his defense secretary
-            to make him aware.
-        </p>
-
-        <p>
-            Hegseth, in turn, has gone to great lengths to purge the senior
-            ranks of anyone likely to offer a contrary opinion. The U.S. officer
-            corps has never excelled at delivering unwelcome news to political
-            decision-makers, but this approach meant the Pentagon was never
-            going to push back against presidential ineptitude.
-        </p>
-
-        <p>
-            All of this was predictable and indeed much of it was predicted.
-            Thus, while the immediate blame for the debacle in Iran attaches to
-            Trump and his advisors, the ultimate blame must lie where no
-            politician will admit it: with the voters.
-        </p>
-
-        <p>
-            It turns out that electing the leader of the most powerful military
-            on the planet is not the same as selecting the most entertaining
-            host of a reality show.
-        </p>
-
-        <p>
-            Reports about lessons learned are doubtless already being penned
-            within the Pentagon. Yet as the strategic fallout, from elevated
-            oil prices to depleted U.S. resources, of this predictable and
-            disgraceful failure continue to mount, the question is whether
-            American voters have realized that no amount of military excellence
-            is sufficient to insulate them from their own poor choices at the
-            ballot box.
-        </p>
-
-    </article>
+                <p>Reports about lessons learned are doubtless already being penned within the Pentagon. Yet as the strategic fallout, from elevated oil prices to depleted U.S. resources, of this predictable and disgraceful failure continue to mount, the question is whether American voters have realized that no amount of military excellence is sufficient to insulate them from their own poor choices at the ballot box.</p>
+            </div>
+        </article>
+    </div>
 
 </body>
 </html>

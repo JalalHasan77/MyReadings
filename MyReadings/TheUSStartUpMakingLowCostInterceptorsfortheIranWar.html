@@ -5,235 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The U.S. Start-Up Making Low-Cost Interceptors for the Iran War</title>
     <style>
+
         :root {
-            --primary-color: #121212;
-            --text-muted: #666666;
-            --border-color: #e2e2e2;
-            --bg-caption: #f9f9f9;
+            --primary-color: #1a1a1a;
+            --accent-color: #b91c1c;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
             --font-serif: Georgia, 'Times New Roman', Times, serif;
             --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        body {
-            font-family: var(--font-serif);
-            line-height: 1.6;
-            color: var(--primary-color);
-            background-color: #ffffff;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px 0;
+            padding: 0;
         }
 
-        .article-container {
-            max-width: 680px;
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 760px;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        header {
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+            .back-link:hover {
+                color: var(--accent-color);
+            }
+
+        article {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 32px 40px 40px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        header.article-header {
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 20px;
         }
 
-        h1.article-title {
+        h1.headline {
+            font-family: var(--font-serif);
             font-size: 2.25rem;
-            line-height: 1.2;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -0.02em;
-        }
-
-        h2.article-subtitle {
-            font-size: 1.25rem;
-            line-height: 1.4;
-            font-weight: 400;
-            color: #333333;
-            margin-top: 0;
-            margin-bottom: 24px;
-        }
-
-        .byline-container {
-            font-family: var(--font-sans);
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        .byline-authors {
-            font-weight: 600;
             color: var(--primary-color);
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            line-height: 1.15;
         }
 
-        .byline-date {
-            margin-top: 4px;
-        }
-
-        .byline-reporting {
-            margin-top: 4px;
+        p.dek {
+            font-family: var(--font-serif);
             font-style: italic;
-            font-size: 0.8rem;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
         }
 
-        p {
-            font-size: 1.0625rem;
-            margin-bottom: 1.5rem;
+        figure {
+            margin: 24px 0;
+        }
+
+            figure img {
+                width: 100%;
+                height: auto;
+                border-radius: 6px;
+                display: block;
+                margin-bottom: 6px;
+            }
+
+            figure figcaption {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 8px;
+                line-height: 1.4;
+            }
+
+        .byline-block {
+            margin: 20px 0 4px;
+            font-size: 0.95rem;
+        }
+
+            .byline-block .by {
+                font-weight: 600;
+                color: var(--primary-color);
+            }
+
+            .byline-block .dateline {
+                color: var(--text-muted);
+                font-style: italic;
+                display: block;
+                margin-top: 2px;
+            }
+
+            .byline-block .pubdate {
+                color: var(--text-muted);
+                display: block;
+                margin-top: 2px;
+            }
+
+        .article-body p {
+            font-family: var(--font-serif);
+            font-size: 1.08rem;
+            color: var(--text-color);
+            margin-bottom: 18px;
         }
 
         h3.section-heading {
             font-family: var(--font-sans);
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        figure {
-            margin: 2rem 0;
-            padding: 0;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            height: 380px;
-            background-color: #f0f0f0;
-            border: 1px dashed #cccccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888888;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-        }
-
-        figcaption {
-            font-family: var(--font-sans);
-            font-size: 0.8125rem;
-            line-height: 1.4;
-            color: var(--text-muted);
+            color: var(--primary-color);
             margin-top: 8px;
-            padding: 8px 12px;
-            background-color: var(--bg-caption);
-            border-left: 3px solid #ccc;
+            margin-bottom: 12px;
         }
 
-            figcaption .credit {
-                color: #888888;
-            }
-
-        footer.author-info {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
+        .author-bio {
+            margin-top: 32px;
+            padding-top: 20px;
             border-top: 1px solid var(--border-color);
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
         }
 
-            footer.author-info p {
-                font-size: 0.85rem;
-                margin-bottom: 0.5rem;
+            .author-bio p {
+                margin-bottom: 10px;
             }
     </style>
 </head>
 <body>
 
-    <article class="article-container">
+    <div class="container">
+        <a class="back-link" href="MainPage.html">&larr; Back to Iran War</a>
 
-        <header>
-            <h1 class="article-title">The U.S. Start-Up Making Low-Cost Interceptors for the Iran War</h1>
-            <h2 class="article-subtitle">For Florida-based Powerus, becoming a global supplier of counterdrone technology has meant involving the Trumps, a golf course and a new way of doing business.</h2>
+        <article>
+            <header class="article-header">
+                <h1 class="headline">The U.S. Start-Up Making Low-Cost Interceptors for the Iran War</h1>
+                <p class="dek">For Florida-based Powerus, becoming a global supplier of counterdrone technology has meant involving the Trumps, a golf course and a new way of doing business.</p>
+            </header>
 
-            <div class="byline-container">
-                <div class="byline-authors">By Farah Stockman and Ismaeel Naar</div>
-                <div class="byline-date">Aug. 20, 2026</div>
-                <div class="byline-reporting">Farah Stockman reported from Washington, and Ismaeel Naar from the United Arab Emirates.</div>
+            <figure>
+                <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar1.jpg" alt="">
+                <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar2.jpg" alt="">
+                <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar3.jpg" alt="">
+                <figcaption>A facility in the United Arab Emirates that makes drone interceptors for Powerus, a U.S. start-up. Ismaeel Naar/The New York Times</figcaption>
+            </figure>
+
+            <div class="byline-block">
+                <span class="by">By Farah Stockman and Ismaeel Naar</span>
+                <span class="dateline">Farah Stockman reported from Washington, and Ismaeel Naar from the United Arab Emirates.</span>
+                <span class="pubdate">Aug. 20, 2026</span>
             </div>
-        </header>
 
-        <figure>
+            <div class="article-body">
+                <p>In a small warehouse in the United Arab Emirates, workers spend up to 12 hours a day snapping together 3-D printed components to make interceptors capable of knocking Iranian drones out of the sky at speeds of up to 200 miles per hour.</p>
 
-            <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar1.jpg" />
-            <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar2.jpg" />
-            <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar3.jpg" />
-            <figcaption>A facility in the United Arab Emirates that makes drone interceptors for Powerus, a U.S. start-up. <span class="credit">Ismaeel Naar/The New York Times</span></figcaption>
-        </figure>
+                <p>The facility, which came online last month, is being used by Powerus, a start-up in West Palm Beach, Fla., to make inexpensive interceptors.</p>
 
-        <p>In a small warehouse in the United Arab Emirates, workers spend up to 12 hours a day snapping together 3-D printed components to make interceptors capable of knocking Iranian drones out of the sky at speeds of up to 200 miles per hour.</p>
+                <p>The factory is the company's first foray into the Middle East, and part of its plan to become a global supplier. Factories affiliated with Powerus make roughly 3,000 drone interceptors a month, a spokesman said, and the company is trying to establish a network of factories that will increase production to 15,000 a month worldwide by mid-2027. It would not publicly disclose the identities of its customers or contract manufacturer in the Emirates.</p>
 
-        <p>The facility, which came online last month, is being used by Powerus, a start-up in West Palm Beach, Fla., to make inexpensive interceptors.</p>
+                <p>Achieving those numbers requires a complete shift in the way business is done in a defense industry known for being slow, bureaucratic and expensive. To meet the urgent demands of U.S.-allied countries that are under threat, Powerus has teamed up with local manufacturers in regions where the interceptors are needed. This allows the company to make them quickly in existing factories, rather than build new plants in the United States and export the weapons.</p>
 
-        <p>The factory is the company’s first foray into the Middle East, and part of its plan to become a global supplier. Factories affiliated with Powerus make roughly 3,000 drone interceptors a month, a spokesman said, and the company is trying to establish a network of factories that will increase production to 15,000 a month worldwide by mid-2027. It would not publicly disclose the identities of its customers or contract manufacturer in the Emirates.</p>
+                <p>The Iran war has accelerated longstanding plans by the Emirates and other nations to make more weapons within their own borders. The civilian infrastructure of the Emirates was the most heavily targeted after the war started in February, as Iran sought to show its leverage over a symbol of global prosperity in the region. Now the need for more interceptors is critical as American-made stockpiles dwindle. More than 500 ballistic missiles and over 2,200 Iranian drones have been fired at targets in the Emirates. The attacks killed at least 15 people, injured hundreds, shut down an oil refinery and destroyed two Amazon data centers.</p>
 
-        <p>Achieving those numbers requires a complete shift in the way business is done in a defense industry known for being slow, bureaucratic and expensive. To meet the urgent demands of U.S.-allied countries that are under threat, Powerus has teamed up with local manufacturers in regions where the interceptors are needed. This allows the company to make them quickly in existing factories, rather than build new plants in the United States and export the weapons.</p>
+                <p>Interceptors are like small missiles, designed to crash into and destroy airborne threats before they reach their targets. The interceptor that Powerus developed, called Guardian, costs about $5,000 and is based on a Ukrainian design that was effective against Russian Shahed drones.</p>
 
-        <p>The Iran war has accelerated longstanding plans by the Emirates and other nations to make more weapons within their own borders. The civilian infrastructure of the Emirates was the most heavily targeted after the war started in February, as Iran sought to show its leverage over a symbol of global prosperity in the region. Now the need for more interceptors is critical as American-made stockpiles dwindle. More than 500 ballistic missiles and over 2,200 Iranian drones have been fired at targets in the Emirates. The attacks killed at least 15 people, injured hundreds, shut down an oil refinery and destroyed two Amazon data centers.</p>
+                <p>Powerus designed the Guardians to be relatively simple to assemble, as pieces snap together like Legos, and use off-the-shelf microchips and GPS location modules. They can't intercept ballistic missiles, as Lockheed Martin's PAC-3 interceptors can, but Shahed drones are the most common form of attack by Iran.</p>
 
-        <p>Interceptors are like small missiles, designed to crash into and destroy airborne threats before they reach their targets. The interceptor that Powerus developed, called Guardian, costs about $5,000 and is based on a Ukrainian design that was effective against Russian Shahed drones.</p>
+                <figure>
+                    <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar4.jpg" alt="">
+                    <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar5.jpg" alt="">
+                    <figcaption>A Guardian interceptor made by Powerus was tested in June in Poltava, Ukraine. Brendan Hoffman for The New York Times</figcaption>
+                </figure>
 
-        <p>Powerus designed the Guardians to be relatively simple to assemble, as pieces snap together like Legos, and use off-the-shelf microchips and GPS location modules. They can’t intercept ballistic missiles, as Lockheed Martin’s PAC-3 interceptors can, but Shahed drones are the most common form of attack by Iran.</p>
+                <p>Powerus provided an Emirati contract manufacturer with the training, components and software needed to assemble interceptors for a customer in the Middle East, a setup designed for speed, said Michael Sinensky, co-founder and executive vice president of marketing for Powerus.</p>
 
-        <figure>
-            <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar4.jpg" />
-            <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar5.jpg" />
-            <figcaption>A Guardian interceptor made by Powerus was tested in June in Poltava, Ukraine. <span class="credit">Brendan Hoffman for The New York Times</span></figcaption>
-        </figure>
+                <p>The factory's workers, who are mostly Filipino and Chinese, make roughly 30 interceptors a day, with a goal of ramping up to 100 soon.</p>
 
-        <p>Powerus provided an Emirati contract manufacturer with the training, components and software needed to assemble interceptors for a customer in the Middle East, a setup designed for speed, said Michael Sinensky, co-founder and executive vice president of marketing for Powerus.</p>
+                <p>The company said last week that it had signed a commercial contract worth $22 million to protect oil and gas infrastructure in the Middle East. In addition, it has teamed up with a defense company near Mumbai to make interceptors in India.</p>
 
-        <p>The factory’s workers, who are mostly Filipino and Chinese, make roughly 30 interceptors a day, with a goal of ramping up to 100 soon.</p>
+                <p>As the Trump administration pressures suppliers to deliver weapons more quickly, even the largest defense companies are moving toward a model of co-production and less complicated systems. Lockheed Martin, for example, which typically makes weapons in U.S. factories and ships them abroad to government-approved customers, said in July that it would produce a lower-cost interceptor in Europe with European partners. And while the weapon would cost about $2 million — about half as much as the PAC-3, its best-known model — it isn't expected to be tested until 2028.</p>
 
-        <p>The company said last week that it had signed a commercial contract worth $22 million to protect oil and gas infrastructure in the Middle East. In addition, it has teamed up with a defense company near Mumbai to make interceptors in India.</p>
+                <p>Brett Velicovich, chief operating officer of Powerus, said the whole industry was trending toward the company's business model.</p>
 
-        <p>As the Trump administration pressures suppliers to deliver weapons more quickly, even the largest defense companies are moving toward a model of co-production and less complicated systems. Lockheed Martin, for example, which typically makes weapons in U.S. factories and ships them abroad to government-approved customers, said in July that it would produce a lower-cost interceptor in Europe with European partners. And while the weapon would cost about $2 million — about half as much as the PAC-3, its best-known model — it isn’t expected to be tested until 2028.</p>
+                <p>"When the largest defense contractor in the world builds PAC-3 in partnership with European manufacturers, that's the industry acknowledging what the last four years demonstrated: You cannot supply a modern conflict from a single continent or facility," he said. "Production has to sit close to where it's needed."</p>
 
-        <p>Brett Velicovich, chief operating officer of Powerus, said the whole industry was trending toward the company’s business model.</p>
+                <p>Powerus isn't the only American company building interceptors in the Emirates. In October, Raytheon announced a partnership to build its Coyote interceptors there. The estimated cost is $126,500 per interceptor, according to a report by the Center for a New American Security, a Washington think tank.</p>
 
-        <p>“When the largest defense contractor in the world builds PAC-3 in partnership with European manufacturers, that’s the industry acknowledging what the last four years demonstrated: You cannot supply a modern conflict from a single continent or facility,” he said. “Production has to sit close to where it’s needed.”</p>
+                <p>And Powerus will have additional competition on price. Neros, a start-up in Torrance, Calif., is developing an interceptor drone called Bandit, with the most basic model costing about $5,000, a spokeswoman said.</p>
 
-        <p>Powerus isn’t the only American company building interceptors in the Emirates. In October, Raytheon announced a partnership to build its Coyote interceptors there. The estimated cost is $126,500 per interceptor, according to a report by the Center for a New American Security, a Washington think tank.</p>
+                <h3 class="section-heading">The booming business of war</h3>
 
-        <p>And Powerus will have additional competition on price. Neros, a start-up in Torrance, Calif., is developing an interceptor drone called Bandit, with the most basic model costing about $5,000, a spokeswoman said.</p>
+                <p>Shortly after the Iran war began, Powerus announced an unusual merger with a publicly traded golf course operator, Aureus Greenway Holdings, in a deal brokered by an investment firm with ties to Donald Trump Jr. and Eric Trump, President Trump's two oldest sons.</p>
 
-        <h3 class="section-heading">The booming business of war</h3>
+                <p>The golf course operator would become a wholly owned subsidiary of Powerus, a company spokesman said. The deal was brokered by Dominari Securities, an investment firm owned by Dominari Holdings, which counts the two Trump brothers as shareholders and advisory board members.</p>
 
-        <p>Shortly after the Iran war began, Powerus announced an unusual merger with a publicly traded golf course operator, Aureus Greenway Holdings, in a deal brokered by an investment firm with ties to Donald Trump Jr. and Eric Trump, President Trump’s two oldest sons.</p>
+                <p>"We don't care about politics — we want to save lives," Mr. Sinensky said. "We appreciate the investments that they made into a vehicle that invested into us."</p>
 
-        <p>The golf course operator would become a wholly owned subsidiary of Powerus, a company spokesman said. The deal was brokered by Dominari Securities, an investment firm owned by Dominari Holdings, which counts the two Trump brothers as shareholders and advisory board members.</p>
+                <p>Still, Powerus has issued a number of announcements involving the Trumps or their associates. Keith Kellogg, a retired lieutenant general who served last year as the White House senior adviser to President Trump, joined the company's advisory board. In June, Unusual Machines, a Florida-based drone component maker that has Donald Trump Jr. on its advisory board, invested $30 million. And this month, the company signed a contract worth up to $90 million to provide interceptors to the Air Force.</p>
 
-        <p>“We don’t care about politics — we want to save lives,” Mr. Sinensky said. “We appreciate the investments that they made into a vehicle that invested into us.”</p>
+                <p>The seeds of Powerus date back to 2022 when Russia invaded Ukraine. Mr. Sinensky, who owned WeShield, a company that gathered medical supplies globally during the Covid-19 pandemic, traveled to Ukraine to deliver medical kits with his business partner, Roman Vinfeld, who spoke the language. The two men had been friends since high school.</p>
 
-        <p>Still, Powerus has issued a number of announcements involving the Trumps or their associates. Keith Kellogg, a retired lieutenant general who served last year as the White House senior adviser to President Trump, joined the company’s advisory board. In June, Unusual Machines, a Florida-based drone component maker that has Donald Trump Jr. on its advisory board, invested $30 million. And this month, the company signed a contract worth up to $90 million to provide interceptors to the Air Force.</p>
+                <p>"We saw firsthand the start of the drone wars," Mr. Sinensky said. "Our warehouse of humanitarian supplies got destroyed."</p>
 
-        <p>The seeds of Powerus date back to 2022 when Russia invaded Ukraine. Mr. Sinensky, who owned WeShield, a company that gathered medical supplies globally during the Covid-19 pandemic, traveled to Ukraine to deliver medical kits with his business partner, Roman Vinfeld, who spoke the language. The two men had been friends since high school.</p>
+                <figure>
+                    <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar6.jpg" alt="">
+                    <figcaption>The Powerus executives, from left, Roman Vinfeld, Brett Velicovich and Michael Sinensky in Lviv, Ukraine, in 2022. Credit...Michael Sinensky</figcaption>
+                </figure>
 
-        <p>“We saw firsthand the start of the drone wars,” Mr. Sinensky said. “Our warehouse of humanitarian supplies got destroyed.”</p>
+                <p>While staying in a safe house in Lviv, the pair met Mr. Velicovich, an Army Special Operations veteran.</p>
 
-        <figure>
-            <img src="images/TheUSStartUpMakingLowCostInterceptorsfortheIranWar6.jpg" />
-            <figcaption>The Powerus executives, from left, Roman Vinfeld, Brett Velicovich and Michael Sinensky in Lviv, Ukraine, in 2022. <span class="credit">Credit...Michael Sinensky</span></figcaption>
-        </figure>
+                <p>Mr. Sinensky began hosting American firms that sent their drones to Ukraine for testing. Mr. Velicovich vetted them and found them to be subpar, he said. The three formed Powerus alongside Andrew Fox, who is chief executive, and Ziv Marom to help Americans and their allies prepare for a new era of drone warfare.</p>
 
-        <p>While staying in a safe house in Lviv, the pair met Mr. Velicovich, an Army Special Operations veteran.</p>
+                <p>Powerus sought out partners in Ukraine with battle-tested technology and licensed it. It also acquired other drone companies, including Tandem Defense, which designed modular drones that could be snapped together, and Kaizen Aerospace, which was founded by Mr. Marom and makes drones that can lift up to 1,000 pounds of cargo and fly autonomously.</p>
 
-        <p>Mr. Sinensky began hosting American firms that sent their drones to Ukraine for testing. Mr. Velicovich vetted them and found them to be subpar, he said. The three formed Powerus alongside Andrew Fox, who is chief executive, and Ziv Marom to help Americans and their allies prepare for a new era of drone warfare.</p>
+                <p>Powerus began producing drones and Guardian interceptors in factories in North Carolina and California for the U.S. military. But Guardians only partly address munitions shortages since they are designed for midsize drones, and countries will still need higher-end interceptors to take down missiles.</p>
 
-        <p>Powerus sought out partners in Ukraine with battle-tested technology and licensed it. It also acquired other drone companies, including Tandem Defense, which designed modular drones that could be snapped together, and Kaizen Aerospace, which was founded by Mr. Marom and makes drones that can lift up to 1,000 pounds of cargo and fly autonomously.</p>
+                <p>"They are complements, not substitutes, for the PAC-3," said Stacie Pettyjohn, a senior fellow and director of the defense program at the Center for a New American Security. She added that Iran was most likely rebuilding its stockpile of missiles and might soon get Geran-3s — jet-powered Shaheds designed by Russia that fly much faster than the original version.</p>
 
-        <p>Powerus began producing drones and Guardian interceptors in factories in North Carolina and California for the U.S. military. But Guardians only partly address munitions shortages since they are designed for midsize drones, and countries will still need higher-end interceptors to take down missiles.</p>
+                <p>"They will be moving toward the types of salvos that Russia is throwing at Ukraine," Ms. Pettyjohn said of Iran. "That is what we have to plan to defend against."</p>
 
-        <p>“They are complements, not substitutes, for the PAC-3,” said Stacie Pettyjohn, a senior fellow and director of the defense program at the Center for a New American Security. She added that Iran was most likely rebuilding its stockpile of missiles and might soon get Geran-3s — jet-powered Shaheds designed by Russia that fly much faster than the original version.</p>
+                <p>Nonetheless, Guardians are already being produced in the region. Mr. Velicovich demonstrated the Guardian's abilities to a buyer in Dubai weeks after the war started, and soon had a contract. At the time, the Emirates was using PAC-3 interceptors that cost millions of dollars each to destroy $40,000 Shahed drones — an unsustainable strategy, said Albert Vidal, a research associate at the International Institute for Strategic Studies, who is based in the region.</p>
 
-        <p>“They will be moving toward the types of salvos that Russia is throwing at Ukraine,” Ms. Pettyjohn said of Iran. “That is what we have to plan to defend against.”</p>
+                <p>"Goal No. 1 is to have a sovereign capability," Mr. Vidal said. "The reaction in the U.A.E. is: 'We're going to continue buying as much as we can from the U.S., but we will also buy from other players and we are also going to produce stuff at home.'"</p>
+            </div>
 
-        <p>Nonetheless, Guardians are already being produced in the region. Mr. Velicovich demonstrated the Guardian’s abilities to a buyer in Dubai weeks after the war started, and soon had a contract. At the time, the Emirates was using PAC-3 interceptors that cost millions of dollars each to destroy $40,000 Shahed drones — an unsustainable strategy, said Albert Vidal, a research associate at the International Institute for Strategic Studies, who is based in the region.</p>
-
-        <p>“Goal No. 1 is to have a sovereign capability,” Mr. Vidal said. “The reaction in the U.A.E. is: ‘We’re going to continue buying as much as we can from the U.S., but we will also buy from other players and we are also going to produce stuff at home.’”</p>
-
-        <footer class="author-info">
-            <p><strong>Farah Stockman</strong> is a Times business reporter writing about manufacturing and the government policies that influence companies that make things in the United States.</p>
-            <p><strong>Ismaeel Naar</strong> is an international reporter for The Times, covering the Gulf states. He is based in Dubai, United Arab Emirates.</p>
-        </footer>
-
-    </article>
+            <div class="author-bio">
+                <p><strong>Farah Stockman</strong> is a Times business reporter writing about manufacturing and the government policies that influence companies that make things in the United States.</p>
+                <p><strong>Ismaeel Naar</strong> is an international reporter for The Times, covering the Gulf states. He is based in Dubai, United Arab Emirates.</p>
+            </div>
+        </article>
+    </div>
 
 </body>
 </html>
