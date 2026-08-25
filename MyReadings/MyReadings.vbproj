@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HomePage.html" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="images\IRAN-STRATEGY-TACTICS-GettyImages-2263711928.jpg" />
     <Content Include="images\TheUSStartUpMakingLowCostInterceptorsfortheIranWar1.jpg" />
     <Content Include="images\TheUSStartUpMakingLowCostInterceptorsfortheIranWar2.jpg" />
