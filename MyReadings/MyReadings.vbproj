@@ -92,8 +92,10 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AfterSixMonthsOfIranWarMarketsDefyWorstFears.html" />
     <Content Include="HomePage.html" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="WhyManyIraniansAreLosingHopeAfterSixMonthsOfWar.html" />
     <Content Include="images\IRAN-STRATEGY-TACTICS-GettyImages-2263711928.jpg" />
     <Content Include="images\MaximumPressureonIranWillFail1.jpg" />
     <Content Include="images\TheUSStartUpMakingLowCostInterceptorsfortheIranWar1.jpg" />
@@ -105,6 +107,7 @@
     <Content Include="images\WearyUSSAbrahamLincolnLeavesMiddleEast.jpeg" />
     <Content Include="MainPage.html" />
     <Content Include="MaximumPressureonIranWillFail.html" />
+    <Content Include="SixMonthsInIransRegimeStandsUSGoalsRemainUnmet.html" />
     <Content Include="TheUSIsLearningtheWrongLessonsinIran.html" />
     <Content Include="TheUSStartUpMakingLowCostInterceptorsfortheIranWar.html" />
     <Content Include="WearyUSSAbrahamLincolnLeavesMiddleEast.html" />
