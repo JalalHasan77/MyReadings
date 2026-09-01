@@ -96,6 +96,7 @@
     <Content Include="HomePage.html" />
     <Content Include="HtmlPage1.html" />
     <Content Include="images\IranWontheWarbutMayLosethePeace.jpg" />
+    <Content Include="images\IStudySuccessfulPeople1.jpg" />
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet1.jpg.jpg" />
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet10.jpg" />
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet2.jpg" />
@@ -115,6 +116,8 @@
     <Content Include="images\WhyTheUnitedStatesCantQuitItsWars1.jpg" />
     <Content Include="images\WhyTheUnitedStatesCantQuitItsWars2.jpg" />
     <Content Include="images\WhyTheUnitedStatesCantQuitItsWars3.jpg" />
+    <Content Include="IranWontheWarbutMayLosethePeace.html" />
+    <Content Include="IStudySuccessfulPeople.TheyHaveOneHabitinCommon..html" />
     <Content Include="Template.txt" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WhyManyIraniansAreLosingHopeAfterSixMonthsOfWar.html" />
