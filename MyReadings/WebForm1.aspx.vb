@@ -143,6 +143,37 @@
         Return String.Empty
     End Function
 
+    ''' <summary>
+    ''' Strips characters that are not safe to use in a file name (and a few extra
+    ''' characters that, while technically legal in file names, are awkward inside
+    ''' an href/URL) so a title with special characters can still be turned into a
+    ''' clean .html file name.
+    ''' </summary>
+    Private Function SanitizeFileName(ByVal name As String) As String
+        If String.IsNullOrWhiteSpace(name) Then
+            Return String.Empty
+        End If
+
+        Dim invalidChars() As Char = System.IO.Path.GetInvalidFileNameChars()
+        Dim sb As New System.Text.StringBuilder()
+
+        For Each c As Char In name
+            If Array.IndexOf(invalidChars, c) = -1 Then
+                sb.Append(c)
+            End If
+        Next
+
+        ' These are valid in a file name on most systems but cause trouble in a
+        ' URL/href, so strip them too.
+        Dim extraIllegal() As Char = {"#"c, "%"c, "&"c, "?"c, "+"c, "="c, "@"c, "!"c, "'"c, "*"c, ","c, ";"c, ":"c}
+        Dim result As String = sb.ToString()
+        For Each c As Char In extraIllegal
+            result = result.Replace(c.ToString(), "")
+        Next
+
+        Return result.Trim()
+    End Function
+
     Private Function GetFirstWords(ByVal text As String, ByVal wordCount As Integer) As String
         If String.IsNullOrWhiteSpace(text) Then
             Return String.Empty
@@ -157,6 +188,8 @@
         Dim sb As New System.Text.StringBuilder()
         Dim i As Integer = 0
         Dim documentTitleText As String = String.Empty
+        Dim documentAuthorText As String = String.Empty
+        Dim documentPubDateText As String = String.Empty
 
         ' Pre-scan to find the index of the last "Paragraph" item, so we know
         ' where to close the article-body div once we reach it below.
@@ -213,7 +246,7 @@
                     Dim figcaptionText As String = GetPart(parts, 3)
 
                     sb.AppendLine("            <figure>")
-                    sb.AppendLine("                <img src=""images/" & srcText & """ alt=""" & altText & """>")
+                    sb.AppendLine("                <img src=""images/" & srcText & ".jpg"" alt=""" & altText & """>")
                     sb.AppendLine("                <figcaption>" & figcaptionText & "</figcaption>")
                     sb.AppendLine("            </figure>")
 
@@ -221,6 +254,13 @@
                     Dim autherText As String = GetPart(parts, 1)
                     Dim datelineText As String = GetPart(parts, 2)
                     Dim publineText As String = GetPart(parts, 3)
+
+                    ' Remember the first author/pub-date pair so it can be used
+                    ' later to build the MainPage.html article-card entry.
+                    If documentAuthorText = String.Empty Then
+                        documentAuthorText = autherText
+                        documentPubDateText = publineText
+                    End If
 
                     sb.AppendLine("            <div class=""byline-block"">")
                     sb.AppendLine("                <span class=""by"">By " & autherText & "</span>")
@@ -272,10 +312,21 @@
             Dim templateText As String = System.IO.File.ReadAllText(templatePath)
             Dim finalHtml As String = templateText.Replace("[[[[Article]]]]", htmlOutput)
 
-            Dim safeFileName As String = documentTitleText.Replace(" ", "") & ".html"
-            Dim outputPath As String = Server.MapPath("~/App_Data/" & safeFileName)
+            ' Build the file name from a sanitized version of the title so that
+            ' special/illegal characters (quotes, slashes, colons, etc.) never end
+            ' up in the file name, even though the raw title is still used as the
+            ' visible <h1>/heading text above.
+            Dim safeTitleForFileName As String = SanitizeFileName(documentTitleText).Replace(" ", "")
+            If safeTitleForFileName = String.Empty Then
+                safeTitleForFileName = "article-" & DateTime.Now.ToString("yyyyMMddHHmmss")
+            End If
+            Dim safeFileName As String = safeTitleForFileName & ".html"
 
+            Dim outputPath As String = Server.MapPath("~/" & safeFileName)
             System.IO.File.WriteAllText(outputPath, finalHtml)
+
+            ' Add a link card for this new article to MainPage.html.
+            UpdateMainPage(safeFileName, documentTitleText, documentAuthorText, documentPubDateText)
 
             lblStatus.ForeColor = System.Drawing.Color.Green
             lblStatus.Text = "Saved: " & safeFileName
@@ -283,5 +334,46 @@
             lblStatus.ForeColor = System.Drawing.Color.Red
             lblStatus.Text = "Error: " & ex.Message
         End Try
+    End Sub
+
+    ''' <summary>
+    ''' Inserts an <a class="article-card"> link block for the newly written
+    ''' article into MainPage.html so it shows up in the article listing.
+    ''' </summary>
+    Private Sub UpdateMainPage(ByVal articleFileName As String, ByVal titleText As String,
+                                ByVal authorText As String, ByVal pubDateText As String)
+
+        Const insertMarker As String = "<!-- ARTICLES -->"
+        Dim mainPagePath As String = Server.MapPath("~/MainPage.html")
+
+        If Not System.IO.File.Exists(mainPagePath) Then
+            lblStatus.Text &= " (MainPage.html not found - link not added)"
+            Exit Sub
+        End If
+
+        Dim cardHtml As New System.Text.StringBuilder()
+        cardHtml.AppendLine("<a class=""article-card"" href=""" & articleFileName & """>")
+        cardHtml.AppendLine("    <h2>" & titleText & "</h2>")
+        cardHtml.AppendLine("    <p class=""meta"">By " & authorText & " &middot; " & pubDateText & "</p>")
+        cardHtml.AppendLine("</a>")
+
+        Dim mainPageText As String = System.IO.File.ReadAllText(mainPagePath)
+
+        If mainPageText.Contains(insertMarker) Then
+            ' Preferred path: drop the new card right after the marker comment,
+            ' so newest articles appear first. Add a <!-- ARTICLES --> comment
+            ' in MainPage.html where the article cards should start.
+            mainPageText = mainPageText.Replace(insertMarker, insertMarker & Environment.NewLine & cardHtml.ToString())
+        Else
+            ' Fallback if no marker exists: insert just before </body>.
+            Dim bodyCloseIndex As Integer = mainPageText.LastIndexOf("</body>", StringComparison.OrdinalIgnoreCase)
+            If bodyCloseIndex >= 0 Then
+                mainPageText = mainPageText.Insert(bodyCloseIndex, cardHtml.ToString())
+            Else
+                mainPageText &= cardHtml.ToString()
+            End If
+        End If
+
+        System.IO.File.WriteAllText(mainPagePath, mainPageText)
     End Sub
 End Class
