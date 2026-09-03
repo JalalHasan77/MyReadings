@@ -93,8 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AfterSixMonthsOfIranWarMarketsDefyWorstFears.html" />
+    <Content Include="CanIsraelEndItsForeverWars.html" />
     <Content Include="HomePage.html" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="images\CanIsraelEndItsForeverWars1.jpg" />
+    <Content Include="images\CanIsraelEndItsForeverWars2.jpg" />
+    <Content Include="images\CanIsraelEndItsForeverWars3.jpg" />
+    <Content Include="images\CanIsraelEndItsForeverWars4.jpg" />
     <Content Include="images\IranWontheWarbutMayLosethePeace.jpg" />
     <Content Include="images\IStudySuccessfulPeople1.jpg" />
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet1.jpg.jpg" />
