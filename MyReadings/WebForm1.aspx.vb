@@ -343,7 +343,7 @@
     Private Sub UpdateMainPage(ByVal articleFileName As String, ByVal titleText As String,
                                 ByVal authorText As String, ByVal pubDateText As String)
 
-        Const insertMarker As String = "<!-- ARTICLES -->"
+        Const insertAnchor As String = "<main class=""links-container"">"
         Dim mainPagePath As String = Server.MapPath("~/MainPage.html")
 
         If Not System.IO.File.Exists(mainPagePath) Then
@@ -352,23 +352,22 @@
         End If
 
         Dim cardHtml As New System.Text.StringBuilder()
-        cardHtml.AppendLine("<a class=""article-card"" href=""" & articleFileName & """>")
-        cardHtml.AppendLine("    <h2>" & titleText & "</h2>")
-        cardHtml.AppendLine("    <p class=""meta"">By " & authorText & " &middot; " & pubDateText & "</p>")
-        cardHtml.AppendLine("</a>")
+        cardHtml.AppendLine("        <a class=""article-card"" href=""" & articleFileName & """>")
+        cardHtml.AppendLine("            <h2>" & titleText & "</h2>")
+        cardHtml.AppendLine("            <p class=""meta"">By " & authorText & " &middot; " & pubDateText & "</p>")
+        cardHtml.Append("        </a>")
 
         Dim mainPageText As String = System.IO.File.ReadAllText(mainPagePath)
 
-        If mainPageText.Contains(insertMarker) Then
-            ' Preferred path: drop the new card right after the marker comment,
-            ' so newest articles appear first. Add a <!-- ARTICLES --> comment
-            ' in MainPage.html where the article cards should start.
-            mainPageText = mainPageText.Replace(insertMarker, insertMarker & Environment.NewLine & cardHtml.ToString())
+        If mainPageText.Contains(insertAnchor) Then
+            ' Drop the new card immediately under <main class="links-container">,
+            ' so the newest article shows up first in the list.
+            mainPageText = mainPageText.Replace(insertAnchor, insertAnchor & Environment.NewLine & cardHtml.ToString())
         Else
-            ' Fallback if no marker exists: insert just before </body>.
+            ' Fallback if the <main class="links-container"> tag isn't found: insert just before </body>.
             Dim bodyCloseIndex As Integer = mainPageText.LastIndexOf("</body>", StringComparison.OrdinalIgnoreCase)
             If bodyCloseIndex >= 0 Then
-                mainPageText = mainPageText.Insert(bodyCloseIndex, cardHtml.ToString())
+                mainPageText = mainPageText.Insert(bodyCloseIndex, cardHtml.ToString() & Environment.NewLine)
             Else
                 mainPageText &= cardHtml.ToString()
             End If
