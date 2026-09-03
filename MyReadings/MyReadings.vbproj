@@ -93,9 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AfterSixMonthsOfIranWarMarketsDefyWorstFears.html" />
+    <Content Include="ANewWorldOrderIsComing.WeAren’tReady..html" />
     <Content Include="CanIsraelEndItsForeverWars.html" />
     <Content Include="HomePage.html" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="images\ANewWorldOrderIsComing1.jpg" />
     <Content Include="images\CanIsraelEndItsForeverWars1.jpg" />
     <Content Include="images\CanIsraelEndItsForeverWars2.jpg" />
     <Content Include="images\CanIsraelEndItsForeverWars3.jpg" />
