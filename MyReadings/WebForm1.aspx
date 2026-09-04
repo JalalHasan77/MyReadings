@@ -70,6 +70,7 @@
                             <asp:ListItem Text="figure" Value="figure"></asp:ListItem>
                             <asp:ListItem Text="author" Value="author"></asp:ListItem>
                             <asp:ListItem Text="Paragraph" Value="Paragraph"></asp:ListItem>
+                            <asp:ListItem Text="Pull Quote" Value="Pull Quote"></asp:ListItem>
                             <asp:ListItem Text="author-bio" Value="author-bio"></asp:ListItem>
                         </asp:RadioButtonList>
 
@@ -140,6 +141,15 @@
                                 <asp:Label runat="server" CssClass="form-label" AssociatedControlID="paragraph" Text="paragraph:"></asp:Label>
                                 <div class="form-control">
                                     <asp:TextBox ID="paragraph" runat="server" TextMode="MultiLine" Rows="4"></asp:TextBox>
+                                </div>
+                            </div>
+                        </asp:Panel>
+
+                        <asp:Panel ID="pnlPullQuote" runat="server" Visible="false">
+                            <div class="form-row">
+                                <asp:Label runat="server" CssClass="form-label" AssociatedControlID="pullQuote" Text="Pull Quote:"></asp:Label>
+                                <div class="form-control">
+                                    <asp:TextBox ID="pullQuote" runat="server" TextMode="MultiLine" Rows="3"></asp:TextBox>
                                 </div>
                             </div>
                         </asp:Panel>

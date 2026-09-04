@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class WebForm1
-    
+
     '''<summary>
     '''form1 control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
+
     '''<summary>
     '''ListBox1 control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ListBox1 As Global.System.Web.UI.WebControls.ListBox
-    
+
     '''<summary>
     '''RadioButtonList1 control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
-    
+
     '''<summary>
     '''pnlTitle control.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlTitle As Global.System.Web.UI.WebControls.Panel
-    
+
     '''<summary>
     '''Titled control.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Titled As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''pnlTitleBreaf control.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlTitleBreaf As Global.System.Web.UI.WebControls.Panel
-    
+
     '''<summary>
     '''Breaf control.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Breaf As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''pnlFigure control.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlFigure As Global.System.Web.UI.WebControls.Panel
-    
+
     '''<summary>
     '''src control.
     '''</summary>
@@ -93,7 +93,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents src As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''alt control.
     '''</summary>
@@ -102,7 +102,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents alt As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''figcaption control.
     '''</summary>
@@ -111,7 +111,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents figcaption As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''pnlAuthor control.
     '''</summary>
@@ -120,7 +120,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlAuthor As Global.System.Web.UI.WebControls.Panel
-    
+
     '''<summary>
     '''Auther control.
     '''</summary>
@@ -129,7 +129,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Auther As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''dateline control.
     '''</summary>
@@ -138,7 +138,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents dateline As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''Publine control.
     '''</summary>
@@ -147,7 +147,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Publine As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''pnlParagraph control.
     '''</summary>
@@ -156,7 +156,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlParagraph As Global.System.Web.UI.WebControls.Panel
-    
+
     '''<summary>
     '''paragraph control.
     '''</summary>
@@ -165,7 +165,25 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents paragraph As Global.System.Web.UI.WebControls.TextBox
-    
+
+    '''<summary>
+    '''pnlPullQuote control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pnlPullQuote As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''pullQuote control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pullQuote As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''pnlAuthorBio control.
     '''</summary>
@@ -174,7 +192,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlAuthorBio As Global.System.Web.UI.WebControls.Panel
-    
+
     '''<summary>
     '''LabelAutherBio control.
     '''</summary>
@@ -183,7 +201,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents LabelAutherBio As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''Info control.
     '''</summary>
@@ -192,7 +210,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Info As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''btnInsert control.
     '''</summary>
@@ -201,7 +219,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnInsert As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''Button1 control.
     '''</summary>
@@ -210,7 +228,7 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''lblStatus control.
     '''</summary>

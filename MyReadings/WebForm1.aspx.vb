@@ -17,6 +17,7 @@
         pnlFigure.Visible = False
         pnlAuthor.Visible = False
         pnlParagraph.Visible = False
+        pnlPullQuote.Visible = False
         pnlAuthorBio.Visible = False
 
         Select Case RadioButtonList1.SelectedValue
@@ -30,6 +31,8 @@
                 pnlAuthor.Visible = True
             Case "Paragraph"
                 pnlParagraph.Visible = True
+            Case "Pull Quote"
+                pnlPullQuote.Visible = True
             Case "author-bio"
                 LabelAutherBio.Text = Auther.Text
                 pnlAuthorBio.Visible = True
@@ -83,6 +86,11 @@
 
                 paragraph.Text = String.Empty
 
+            Case "Pull Quote"
+                firstComponentText = pullQuote.Text
+                itemValue = selectedValue & FIELD_SEP & pullQuote.Text
+                pullQuote.Text = String.Empty
+
             Case "author-bio"
                 firstComponentText = LabelAutherBio.Text
                 itemValue = selectedValue & FIELD_SEP & LabelAutherBio.Text & FIELD_SEP & Info.Text
@@ -129,6 +137,9 @@
 
             Case "Paragraph"
                 paragraph.Text = GetPart(parts, 1)
+
+            Case "Pull Quote"
+                pullQuote.Text = GetPart(parts, 1)
 
             Case "author-bio"
                 LabelAutherBio.Text = GetPart(parts, 1)
@@ -283,6 +294,14 @@
                     If i = lastParagraphIndex Then
                         sb.AppendLine("            </div>")
                     End If
+
+                Case "Pull Quote"
+                    Dim pullQuoteText As String = GetPart(parts, 1)
+
+                    sb.AppendLine("            <div class=""pullquote"">")
+                    sb.AppendLine("                <hr class=""pullquote-rule"">")
+                    sb.AppendLine("                <p class=""pullquote-text"">" & pullQuoteText & "</p>")
+                    sb.AppendLine("            </div>")
 
                 Case "author-bio"
                     Dim bioNameText As String = GetPart(parts, 1)
