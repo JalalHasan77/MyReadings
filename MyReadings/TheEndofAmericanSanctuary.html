@@ -139,6 +139,42 @@
             margin-bottom: 18px;
         }
 
+        .article-body::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .pullquote {
+            float: left;
+            width: 44%;
+            margin: 4px 28px 16px 0;
+        }
+
+        .pullquote-rule {
+            border: none;
+            border-top: 2px solid var(--primary-color);
+            width: 42px;
+            margin: 0 0 14px;
+        }
+
+        .pullquote .pullquote-text {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.65rem;
+            line-height: 1.28;
+            color: var(--primary-color);
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .pullquote {
+                float: none;
+                width: 100%;
+                margin: 8px 0 20px;
+            }
+        }
+
         h3.section-heading {
             font-family: var(--font-sans);
             font-size: 1.2rem;
@@ -166,7 +202,7 @@
     <div class="container">
         <a class="back-link" href="MainPage.html">&larr; Back to Iran War</a>
         <article>
-		            <header class="article-header">
+            <header class="article-header">
                 <h1 class="headline">The End of American Sanctuary</h1>
                 <p class="dek">New Threats Demand a New Homeland Defense</p>
             </header>
@@ -176,8 +212,10 @@
             </div>
             <figure>
                 <img src="images/TheEndofAmericanSanctuary1.jpg" alt="American soldiers in El Paso, Texas, as seen from Ciudad Juárez, Mexico, July 2025">
-                <figcaption>American soldiers in El Paso, Texas, as seen from Ciudad Juárez, Mexico, July 2025
-Jose Luis Gonzalez / Reuters</figcaption>
+                <figcaption>
+                    American soldiers in El Paso, Texas, as seen from Ciudad Juárez, Mexico, July 2025
+                    Jose Luis Gonzalez / Reuters
+                </figcaption>
             </figure>
             <div class="article-body">
                 <p>Among its many advantages, the United States benefits from a rare form of geographic luck: it is bracketed on the east and west by two vast moats, the Atlantic and Pacific Oceans, and on the north and south by only two neighbors, both of whom are relatively friendly. Adding to this good fortune is that, since the end of World War II, the United States has possessed a powerful nuclear arsenal and unparalleled military, economic, and technological might. Despite the 9/11 terrorist attacks, this mix of geography, deterrence, and power has led many Americans to feel almost untouchable at home. According to a 2024 Chicago Council on Global Affairs poll, just 19 percent of those surveyed expressed concern about foreign threats.</p>

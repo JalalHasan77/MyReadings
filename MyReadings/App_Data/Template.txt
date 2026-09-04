@@ -139,6 +139,42 @@
             margin-bottom: 18px;
         }
 
+        .article-body::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .pullquote {
+            float: left;
+            width: 44%;
+            margin: 4px 28px 16px 0;
+        }
+
+            .pullquote-rule {
+                border: none;
+                border-top: 2px solid var(--primary-color);
+                width: 42px;
+                margin: 0 0 14px;
+            }
+
+            .pullquote .pullquote-text {
+                font-family: var(--font-serif);
+                font-weight: 700;
+                font-size: 1.65rem;
+                line-height: 1.28;
+                color: var(--primary-color);
+                margin-bottom: 0;
+            }
+
+        @media (max-width: 600px) {
+            .pullquote {
+                float: none;
+                width: 100%;
+                margin: 8px 0 20px;
+            }
+        }
+
         h3.section-heading {
             font-family: var(--font-sans);
             font-size: 1.2rem;
