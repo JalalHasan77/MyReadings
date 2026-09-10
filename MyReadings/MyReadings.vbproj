@@ -116,6 +116,7 @@
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet8.jpg" />
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet9.jpg" />
     <Content Include="images\TheEndofAmericanSanctuary1.jpg" />
+    <Content Include="images\TheIranWarIsPushingGlobalCoal1.jpg" />
     <Content Include="images\WhattheWarinIranHasCostOneGoldStarFamily1.jpg" />
     <Content Include="images\WhattheWarinIranHasCostOneGoldStarFamily2.jpg" />
     <Content Include="images\WhattheWarinIranHasCostOneGoldStarFamily3.jpg" />
@@ -132,6 +133,10 @@
     <Content Include="images\WhyTheUnitedStatesCantQuitItsWars1.jpg" />
     <Content Include="images\WhyTheUnitedStatesCantQuitItsWars2.jpg" />
     <Content Include="images\WhyTheUnitedStatesCantQuitItsWars3.jpg" />
+    <Content Include="images\WhyYemenIsBackontheBrinkofWar1.jpg" />
+    <Content Include="images\WhyYemenIsBackontheBrinkofWar1.png" />
+    <Content Include="images\WhyYemenIsBackontheBrinkofWar2.jpg" />
+    <Content Include="images\WhyYemenIsBackontheBrinkofWar3.jpg" />
     <Content Include="IranWontheWarbutMayLosethePeace.html" />
     <Content Include="IStudySuccessfulPeople.TheyHaveOneHabitinCommon..html" />
     <Content Include="Template.txt" />
@@ -142,6 +147,7 @@
     <Content Include="images\TheLogisticsNightmareFacingUSWarships5.jpg" />
     <Content Include="images\TheLogisticsNightmareFacingUSWarships6.jpg" />
     <Content Include="images\TheLogisticsNightmareFacingUSWarships7.jpg" />
+    <Content Include="TheIranWarIsPushingGlobalCoalUsetoRecordHighs.html" />
     <Content Include="TheLogisticsNightmareFacingU.S.Warships.html" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WhattheWarinIranHasCostOneGoldStarFamily.html" />
@@ -163,6 +169,7 @@
     <Content Include="WearyUSSAbrahamLincolnLeavesMiddleEast.html" />
     <Content Include="Web.config" />
     <Content Include="WhyTheUnitedStatesCantQuitItsWars.html" />
+    <Content Include="WhyYemenIsBackontheBrinkofWar.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="My Project\AssemblyInfo.vb" />
