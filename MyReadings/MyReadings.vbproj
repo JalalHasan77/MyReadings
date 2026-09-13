@@ -94,8 +94,10 @@
   <ItemGroup>
     <Content Include="AfterSixMonthsOfIranWarMarketsDefyWorstFears.html" />
     <Content Include="ANewWorldOrderIsComing.WeAren’tReady..html" />
+    <Content Include="BehindtheScenesVanceGatheredUnvarnishedViewsoftheIranWar.html" />
     <Content Include="CanIsraelEndItsForeverWars.html" />
     <Content Include="HomePage.html" />
+    <Content Include="HouthisSeizeStrategicRedSeaPortaMajorVictoryforIranianAlly.html" />
     <Content Include="HtmlPage1.html" />
     <Content Include="images\AMoreConfidentIran1.jpg" />
     <Content Include="images\ANewWorldOrderIsComing1.jpg" />
@@ -103,6 +105,20 @@
     <Content Include="images\CanIsraelEndItsForeverWars2.jpg" />
     <Content Include="images\CanIsraelEndItsForeverWars3.jpg" />
     <Content Include="images\CanIsraelEndItsForeverWars4.jpg" />
+    <Content Include="images\HouthisSeizeStrategicRedSeaPort1.JPG" />
+    <Content Include="images\HouthisSeizeStrategicRedSeaPort2.JPG" />
+    <Content Include="images\HouthisSeizeStrategicRedSeaPort3.JPG" />
+    <Content Include="images\HouthisSeizeStrategicRedSeaPort4.JPG" />
+    <Content Include="images\InSmallIranianTown1.png" />
+    <Content Include="images\InSmallIranianTown10.jpg" />
+    <Content Include="images\InSmallIranianTown2.jpg" />
+    <Content Include="images\InSmallIranianTown3.png" />
+    <Content Include="images\InSmallIranianTown4.JPG" />
+    <Content Include="images\InSmallIranianTown5.JPG" />
+    <Content Include="images\InSmallIranianTown6.JPG" />
+    <Content Include="images\InSmallIranianTown7.png" />
+    <Content Include="images\InSmallIranianTown8.png" />
+    <Content Include="images\InSmallIranianTown9.jpg" />
     <Content Include="images\IranWontheWarbutMayLosethePeace.jpg" />
     <Content Include="images\IStudySuccessfulPeople1.jpg" />
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet1.jpg.jpg" />
@@ -117,6 +133,11 @@
     <Content Include="images\SixMonthsInIransRegimeStandsUSGoalsRemainUnmet9.jpg" />
     <Content Include="images\TheEndofAmericanSanctuary1.jpg" />
     <Content Include="images\TheIranWarIsPushingGlobalCoal1.jpg" />
+    <Content Include="images\TrumpReturnstoaFamiliarPlaybook1.jpg" />
+    <Content Include="images\VanceGatheredUnvarnishedViewsoftheIranWar1.jpg" />
+    <Content Include="images\VanceGatheredUnvarnishedViewsoftheIranWar2.jpg" />
+    <Content Include="images\VanceGatheredUnvarnishedViewsoftheIranWar3.jpg" />
+    <Content Include="images\VanceGatheredUnvarnishedViewsoftheIranWar4.jpg" />
     <Content Include="images\WhattheWarinIranHasCostOneGoldStarFamily1.jpg" />
     <Content Include="images\WhattheWarinIranHasCostOneGoldStarFamily2.jpg" />
     <Content Include="images\WhattheWarinIranHasCostOneGoldStarFamily3.jpg" />
@@ -137,6 +158,7 @@
     <Content Include="images\WhyYemenIsBackontheBrinkofWar1.png" />
     <Content Include="images\WhyYemenIsBackontheBrinkofWar2.jpg" />
     <Content Include="images\WhyYemenIsBackontheBrinkofWar3.jpg" />
+    <Content Include="InSmallIranianTownaU.S.AttackTurnsaWeddingIntoaTragedy.html" />
     <Content Include="IranWontheWarbutMayLosethePeace.html" />
     <Content Include="IStudySuccessfulPeople.TheyHaveOneHabitinCommon..html" />
     <Content Include="Template.txt" />
@@ -149,6 +171,10 @@
     <Content Include="images\TheLogisticsNightmareFacingUSWarships7.jpg" />
     <Content Include="TheIranWarIsPushingGlobalCoalUsetoRecordHighs.html" />
     <Content Include="TheLogisticsNightmareFacingU.S.Warships.html" />
+    <Content Include="TrumpReturnstoaFamiliarPlaybookastheWarWithIranFlaresUpAgain.html" />
+    <Content Include="VanceGatheredUnvarnishedViewsoftheIranWar1.jpg" />
+    <Content Include="VanceGatheredUnvarnishedViewsoftheIranWar2.jpg" />
+    <Content Include="VanceGatheredUnvarnishedViewsoftheIranWar3.jpg" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WhattheWarinIranHasCostOneGoldStarFamily.html" />
     <Content Include="WhyManyIraniansAreLosingHopeAfterSixMonthsOfWar.html" />
